@@ -1,8 +1,15 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { TextInput } from 'react-native-gesture-handler'
 
 export default function MascotaScreen() {
+    const [id, setid] = useState("")
+    const [nombre, setnombre] = useState("")
+    const [especie, setespecie] = useState("")
+    const [edad, setedad] = useState("")
+
+
+
     return (
         <View>
             {/*------------------ GUARDAR -------------------------- */}
@@ -11,20 +18,23 @@ export default function MascotaScreen() {
                 <TextInput
                     placeholder='Ingresar id'
                     style={styles.txt}
+                    onChangeText={(texto)=> setid(texto)}
                 />
                 <TextInput
                     placeholder='Ingresar nombre'
                     style={styles.txt}
+                    onChangeText={(texto)=> setnombre(texto)}
 
                 />
                 <TextInput
                     placeholder='Ingresar especie'
                     style={styles.txt}
+                    onChangeText={(texto)=> setespecie(texto)}
                 />
                 <TextInput
                     placeholder='Ingresar edad'
                     style={styles.txt}
-
+                    onChangeText={(texto)=> setedad(texto)}
                 />
                 <Button title='Guardar' />
             </View>
@@ -37,24 +47,25 @@ export default function MascotaScreen() {
                 <View style={styles.fila}>
                     <TextInput
                         placeholder='Ingresar id'
-                        style={{width:'25%', backgroundColor:'#6666', borderRadius:10}}
+                        style={{ width: '25%', backgroundColor: '#6666', borderRadius: 10 }}
+                        onChangeText={(texto)=> setid(texto)}
                     />
                     <Button title='buscar' color={'#299979'} />
                 </View>
                 <TextInput
                     placeholder='Ingresar nombre'
                     style={styles.txt}
-
+                    onChangeText={(texto)=> setnombre(texto)}
                 />
                 <TextInput
                     placeholder='Ingresar especie'
                     style={styles.txt}
-
+                    onChangeText={(texto)=> setespecie(texto)}
                 />
                 <TextInput
                     placeholder='Ingresar edad'
                     style={styles.txt}
-
+                    onChangeText={(texto)=> setedad(texto)}
                 />
                 <Button title='Guardar' color={'green'} />
             </View>
@@ -67,6 +78,7 @@ export default function MascotaScreen() {
                 <TextInput
                     placeholder='Ingresar id'
                     style={styles.txt}
+                    onChangeText={(texto)=> setid(texto)}
 
                 />
 
