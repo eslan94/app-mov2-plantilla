@@ -24,13 +24,22 @@ export default function Card(props: any) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#83a0ce',
-        alignItems: 'center',
+        backgroundColor: 'Cyan',
+        alignItems: 'flex-start',
         justifyContent: 'center',
-        margin: 5,
-        borderRadius: 20
+        marginVertical: 10,
+        marginHorizontal: 20,
+        borderRadius: 12,
+        padding: 20,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+        elevation: 5,
     },
     txt: {
-        fontSize: 20
+        fontSize: 18,
+        color: '#333',
+        marginVertical: 4,
     }
 })
