@@ -6,7 +6,7 @@ export default function Card(props: any) {
     console.log(props.data);
 
     function mensaje(mascota: any) {
-        Alert.alert("INFORMACIÓN", "El nombre de la mascota es:" + mascota.nombre)
+        Alert.alert("INFORMACIÓN", "El nombre de la mascota es:" + mascota.name)
     }
 
     return (
@@ -24,7 +24,7 @@ export default function Card(props: any) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'Cyan',
+        backgroundColor: '#00ff00',
         alignItems: 'flex-start',
         justifyContent: 'center',
         marginVertical: 10,

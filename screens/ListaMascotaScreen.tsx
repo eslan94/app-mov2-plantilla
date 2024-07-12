@@ -62,7 +62,7 @@ export default function ListaMascotaScreen() {
     }
 
     return (
-        <View>
+        <View style={styles.container}>
             <FlatList
                 data={lista}
                 renderItem={({item }) =>
@@ -73,4 +73,9 @@ export default function ListaMascotaScreen() {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#87cefa'
+    }
+})
